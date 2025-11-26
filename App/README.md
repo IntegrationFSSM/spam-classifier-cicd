@@ -4,7 +4,7 @@ emoji: 📧
 colorFrom: red
 colorTo: yellow
 sdk: gradio
-sdk_version: 5.0.0
+sdk_version: 6.0.1
 app_file: spam_app.py
 pinned: false
 license: apache-2.0
