@@ -39,4 +39,7 @@ jobs:
         env:
           NAME: ${{ secrets.USER_NAME }}
           EMAIL: ${{ secrets.USER_EMAIL }}
-        run: make update-branch USER_NAME=$NAME USER_EMAIL=$EMAIL
+        run: |
+          NAME="${NAME:-github-actions[bot]}"
+          EMAIL="${EMAIL:-41898282+github-actions[bot]@users.noreply.github.com}"
+          make update-branch USER_NAME="$NAME" USER_EMAIL="$EMAIL"
