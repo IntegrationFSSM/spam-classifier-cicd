@@ -29,8 +29,8 @@ hf-login:
 	huggingface-cli login --token $(HF) --add-to-git-credential
 
 push-hub:
-	huggingface-cli upload $(YASSINEENNHILI)/spam-classifier ./App --repo-type=space --commit-message="Sync App files"
-	huggingface-cli upload $(YASSINEENNHILI)/spam-classifier ./Model /Model --repo-type=space --commit-message="Sync Model"
-	huggingface-cli upload $(YASSINEENNHILI)/spam-classifier ./Results /Metrics --repo-type=space --commit-message="Sync Results"
+	huggingface-cli upload $(HF_USERNAME)/spam-classifier ./App --repo-type=space --commit-message="Sync App files"
+	huggingface-cli upload $(HF_USERNAME)/spam-classifier ./Model /Model --repo-type=space --commit-message="Sync Model"
+	huggingface-cli upload $(HF_USERNAME)/spam-classifier ./Results /Metrics --repo-type=space --commit-message="Sync Results"
 
 deploy: hf-login push-hub
